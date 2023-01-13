@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nats_server:
+    container_name: kalyannatsserver
+    image: 'nats'
+    volumes:
+      - .:/keus-test
+    command: "-c ./keus-test/nats.config"
+    ports:
+      - 9697:9697
+      - 4362:4362
+      - 4369:4369
+      - 4376:4376
+  
+      
